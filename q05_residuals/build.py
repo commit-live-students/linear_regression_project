@@ -6,5 +6,5 @@ from q03_linear_regression.build import linear_regression
 from q04_linear_predictor.build import linear_predictor
 
 def residuals(y, y_pred):
-    error_residuals = y - y_pred
+    '''Enter Code Here'''
     return error_residuals

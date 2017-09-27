@@ -11,5 +11,5 @@ import scipy.stats as stats
 
 
 def qq_residuals(error_residuals):
-    stats.probplot(error_residuals, dist="norm", plot=pylab)
+    '''Enter Code Here'''
     return pylab

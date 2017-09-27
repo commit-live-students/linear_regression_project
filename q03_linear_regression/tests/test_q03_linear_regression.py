@@ -10,7 +10,7 @@ from q02_data_splitter.build import data_splitter
 class TestLoad_data(TestCase):
     def test_linear_regression(self):
 
-        dataframe = load_data('../../data/house_prices_multivariate.csv')
+        dataframe = load_data('../data/house_prices_multivariate.csv')
         X_house_prices, y_house_prices = data_splitter(dataframe)
         lm = linear_regression(X_house_prices, y_house_prices)
         self.assertTrue(lm.coef_.shape[0], 34)

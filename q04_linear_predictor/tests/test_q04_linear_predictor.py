@@ -12,7 +12,7 @@ from q03_linear_regression.build import linear_regression
 class TestLoad_data(TestCase):
     def test_linear_predictor(self):
 
-        dataframe = load_data('../../data/house_prices_multivariate.csv')
+        dataframe = load_data('../data/house_prices_multivariate.csv')
         X_house_prices, y_house_prices = data_splitter(dataframe)
         lm = linear_regression(X_house_prices, y_house_prices)
 

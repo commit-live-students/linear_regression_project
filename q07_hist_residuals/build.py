@@ -7,9 +7,6 @@ from q04_linear_predictor.build import linear_predictor
 from q05_residuals.build import residuals
 from q06_plot_residuals.build import plot_residuals
 
-import matplotlib.pyplot as plt
-
 def hist_residuals(error_residuals, bins):
-    plt.figure(figsize=(15,8))
-    plt.hist(error_residuals, bins=bins)
+    '''Enter Code Here'''
     return plt

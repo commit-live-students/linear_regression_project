@@ -16,7 +16,7 @@ class TestLoad_data(TestCase):
     def test_residuals(self):
 
 
-        dataframe = load_data('../../data/house_prices_multivariate.csv')
+        dataframe = load_data('../data/house_prices_multivariate.csv')
         X_house_prices, y_house_prices = data_splitter(dataframe)
         lm = linear_regression(X_house_prices, y_house_prices)
         y_pred_house_prices, mse_house_prices, mae_house_prices, r2_house_prices = linear_predictor(lm, X_house_prices,

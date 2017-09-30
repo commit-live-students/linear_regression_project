@@ -1,4 +1,4 @@
-## Task 8: Residuals qq plot
+## Residuals QQ plot -Check if set of data is from some theoretical distribution
 
 Let's write a function `qq_residuals()` that plots a quantile-quantile plot of the residuals.
 

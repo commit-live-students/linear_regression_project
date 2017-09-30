@@ -1,4 +1,4 @@
-## Task 2: Split Data into Feature and Target Variables
+## Split Data into Feature and Target Variables - Setting up the analysis
 
 Now that you have imported the data, let's split data into target or dependent variable and feature or independent variables. We can use these variables later on to fit a linear regression model.
 

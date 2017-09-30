@@ -1,4 +1,4 @@
-## Task 3: Fitting a linear regression model
+## Fitting your first linear regression model
 
 Let's write a function `linear_regression()` which takes as input the features and target and fits a LinearRegression with default parameters model on it.
 

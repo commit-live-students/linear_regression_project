@@ -1,4 +1,4 @@
-## Task 1: Load Data
+## Let's get going - Load Data
 
 We will start with loading the data into a variable, which we will use for further analysis
 

@@ -1,4 +1,4 @@
-## Task 6: Plotting residuals
+## Plotting residuals - Visualizing the residuals to validate the model
 
 Let's write a function `plot_residuals()` that returns a scatter plot of SalePrice (target) vs Residuals i.e., a residuals plot.
 

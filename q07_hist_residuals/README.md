@@ -1,4 +1,4 @@
-## Task 7: Residuals Histogram
+## Plot residuals Histogram - Assess whether the observed error (residuals) is consistent
 
 Let's write a function `hist_residuals()` that plots a histogram of the residuals.
 

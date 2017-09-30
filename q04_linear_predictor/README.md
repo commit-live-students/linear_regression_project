@@ -1,4 +1,4 @@
-## Task 4: Predicting using fitted linear regression model
+## Your very first prediction - Using fitted linear regression model
 
 Let's write a function `linear_predictor()` that takes in a fitted linear model and makes a prediction. It also calculates Mean square error, Mean absolute error and r2.
 

@@ -21,6 +21,7 @@ By the end of this assignment,
 
 * You will be able to confidently train a linear regression model and predict values of the target variables
 * You will have a better understanding about the assumptions of linear regression and how to validate them.
+By completing this project you have an opportunity to win 800 points!!
 
 ## On assumptions of linear regression
 

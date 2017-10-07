@@ -9,6 +9,7 @@ from q05_residuals.build import residuals
 import pylab
 import scipy.stats as stats
 
+# call all the necessary functions
 
 def qq_residuals(error_residuals):
     '''Enter Code Here'''

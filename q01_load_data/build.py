@@ -4,9 +4,5 @@ import numpy as np
 
 # Your solution
 def load_data(path):
-
-    #Enter code here
-
-
-
+    dataframe = pd.read_csv(path)
     return  dataframe

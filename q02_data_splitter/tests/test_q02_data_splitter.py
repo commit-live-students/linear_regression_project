@@ -1,15 +1,11 @@
 import sys, os
-sys.path.append(os.path.join(os.path.dirname(os.curdir), '..', '..'))
-import pandas
+sys.path.append(os.path.join(os.path.dirname(os.curdir)))
+from greyatomlib.linear_regression.q01_load_data.build import load_data
 
 from unittest import TestCase
 from q02_data_splitter.build import data_splitter
 
-# from q01_load_data.build import load_data
 
-def load_data(path):
-    dataframe = pandas.read_csv(path)
-    return dataframe
 
 class TestLoad_data(TestCase):
     def test_data_splitter(self):

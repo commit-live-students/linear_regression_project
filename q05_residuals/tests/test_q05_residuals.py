@@ -1,15 +1,14 @@
 import sys, os
 import pandas
-sys.path.append(os.path.join(os.path.dirname(os.curdir), '..', '..'))
+sys.path.append(os.path.join(os.path.dirname(os.curdir)))
 
 from unittest import TestCase
 from q05_residuals.build import residuals
 
-
-from q01_load_data.build import load_data
-from q02_data_splitter.build import data_splitter
-from q03_linear_regression.build import linear_regression
-from q04_linear_predictor.build import linear_predictor
+from greyatomlib.linear_regression.q01_load_data.build import load_data
+from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
+from greyatomlib.linear_regression.q04_linear_predictor.build import linear_predictor
+from greyatomlib.linear_regression.q03_linear_regression.build import linear_regression
 
 
 class TestLoad_data(TestCase):

@@ -1,6 +1,6 @@
-import pandas
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(os.curdir)))
+import pandas
 from unittest import TestCase
 from q01_load_data.build import load_data
 

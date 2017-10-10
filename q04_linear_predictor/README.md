@@ -6,15 +6,15 @@ Let's write a function `linear_predictor()` that takes in a fitted linear model 
 
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- |
-| lm | sklearn.linear_model.base.LinearRegression | Fitted Linear Regression model |
-| X | DataFrame | compulsory | | Dataframe containing feature variables |
-| y | Series/DataFrame | compulsory | | Target Variable |
+| lm | sklearn.linear_model.LinearRegression | compulsory | | Fitted Linear Regression model |
+| X | Pandas DataFrame | compulsory | | Dataframe containing feature variables |
+| y | Pandas Series | compulsory | | Target Variable |
 
 #### Returns:
 
 | Return | dtype | description |
 | --- | --- | --- |
-| y_pred | Series | Predicted values |
-| mse | float | Mean square error |
-| mae | float | Mean absolute error |
-| r2 | float | R-squared |
+| y_pred | numpy.ndarray | Predicted values |
+| mse | numpy.float64 | Mean square error |
+| mae | numpy.float64 | Mean absolute error |
+| r2 | numpy.float64 | R-squared |

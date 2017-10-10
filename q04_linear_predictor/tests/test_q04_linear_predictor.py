@@ -1,22 +1,45 @@
-import sys, os
-sys.path.append(os.path.join(os.path.dirname(os.curdir)))
-
 from unittest import TestCase
-from q04_linear_predictor.build import linear_predictor
+from ..build import linear_predictor
+from greyatomlib.linear_regression.q01_load_data.build import load_data
+from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
+from greyatomlib.linear_regression.q03_linear_regression.build import linear_regression
+from inspect import getargspec
+import numpy
 
-from q01_load_data.build import load_data
-from q02_data_splitter.build import data_splitter
-from q03_linear_regression.build import linear_regression
 
-
-class TestLoad_data(TestCase):
+class TestLinearPrediction(TestCase):
     def test_linear_predictor(self):
 
-        dataframe = load_data('data/house_prices_multivariate.csv')
-        X_house_prices, y_house_prices = data_splitter(dataframe)
-        lm = linear_regression(X_house_prices, y_house_prices)
+        # Input parameters tests
+        args = getargspec(linear_predictor)
+        self.assertEqual(len(args[0]), 3, "Expected argument(s) %d, Given %d" % (3, len(args[0])))
+        self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
-        y_pred_house_prices, mse_house_prices, mae_house_prices, r2_house_prices = linear_predictor(lm, X_house_prices,y_house_prices)
-        self.assertAlmostEqual(mse_house_prices, 1220907901.18, places=2)
-        self.assertAlmostEqual(mae_house_prices, 21303.706257, places=2)
-        self.assertAlmostEqual(r2_house_prices, 0.804349420876, places=2)
+        # Return type tests
+        dataframe = load_data('data/house_prices_multivariate.csv')
+        X, y = data_splitter(dataframe)
+        lr = linear_regression(X, y)
+        y_pred, mse, mae, r2 = linear_predictor(lr, X, y)
+
+        self.assertIsInstance(y_pred, numpy.ndarray,
+                              "Expected data type for return value is `numpy.ndarray`, you are returning %s" % (
+                                  type(y_pred)))
+        self.assertIsInstance(mse, numpy.float64,
+                              "Expected data type for return value is `numpy.float64`, you are returning %s" % (
+                                  type(mse)))
+        self.assertIsInstance(mae, numpy.float64,
+                              "Expected data type for return value is `numpy.float64`, you are returning %s" % (
+                                  type(mae)))
+        self.assertIsInstance(r2, numpy.float64,
+                              "Expected data type for return value is `numpy.float64`, you are returning %s" % (
+                                  type(r2)))
+
+        # Return value tests
+        self.assertEqual(y_pred.shape, (1379,), "Return `y_pred` shape does not match expected value")
+        self.assertAlmostEqual(y_pred[0], 223165.244623, 2, "Return value does not match expected value")
+        self.assertAlmostEqual(y_pred[20], 296637.458632, 2, "Return value does not match expected value")
+        self.assertAlmostEqual(y_pred[40], 143009.698988, 2, "Return value does not match expected value")
+        self.assertAlmostEqual(y_pred[80], 117414.018664, 2, "Return value does not match expected value")
+        self.assertAlmostEqual(mse, 1219044781.49, 2, "Return value does not match expected value")
+        self.assertAlmostEqual(mae, 21224.300871, 2, "Return value does not match expected value")
+        self.assertAlmostEqual(r2, 0.80464798594, 2, "Return value does not match expected value")

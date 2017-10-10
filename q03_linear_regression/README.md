@@ -14,4 +14,4 @@ Let's write a function `linear_regression()` which takes as input the features a
 
 | Return | dtype | description |
 | --- | --- | --- |
-| lm | sklearn.linear_model.base.LinearRegression | Fitted Linear Regression model |
+| lm | sklearn.linear_model.LinearRegression | Fitted Linear Regression model |

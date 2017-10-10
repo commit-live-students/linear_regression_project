@@ -24,8 +24,8 @@ class TestLinearRegression(TestCase):
 
         # Return value tests
         self.assertEqual(lr.coef_.shape, (34,), "Return value shape does not match expected value")
-        self.assertAlmostEqual(lr.coef_[3], 5845.97164192, 4, "Return value shape does not match expected value")
-        self.assertAlmostEqual(lr.coef_[5], 119.385237246, 4, "Return value shape does not match expected value")
-        self.assertAlmostEqual(lr.coef_[10], 9.87201953507, 4, "Return value shape does not match expected value")
-        self.assertAlmostEqual(lr.coef_[33], -583.097021217, 4, "Return value shape does not match expected value")
-        self.assertAlmostEqual(lr.intercept_, 310649.260089, 4, "Return value shape does not match expected value")
+        self.assertAlmostEqual(lr.coef_[3], 5845.97164192, 4, "Return value does not match expected value")
+        self.assertAlmostEqual(lr.coef_[5], 119.385237246, 4, "Return value does not match expected value")
+        self.assertAlmostEqual(lr.coef_[10], 9.87201953507, 4, "Return value does not match expected value")
+        self.assertAlmostEqual(lr.coef_[33], -583.097021217, 4, "Return value does not match expected value")
+        self.assertAlmostEqual(lr.intercept_, 310649.260089, 4, "Return value does not match expected value")

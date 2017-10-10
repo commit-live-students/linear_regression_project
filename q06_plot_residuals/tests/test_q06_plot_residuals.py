@@ -1,26 +1,20 @@
-import sys, os
-sys.path.append(os.path.join(os.path.dirname(os.curdir)))
-
 from unittest import TestCase
-from q06_plot_residuals.build import plot_residuals
+from ..build import plot_residuals
+from unittest import TestCase
+from inspect import getargspec
 
 
-from q01_load_data.build import load_data
-from q02_data_splitter.build import data_splitter
-from q03_linear_regression.build import linear_regression
-from q04_linear_predictor.build import linear_predictor
-from q05_residuals.build import residuals
-
-class TestLoad_data(TestCase):
+class TestPlotResiduals(TestCase):
     def test_plot_residuals(self):
 
+        # Input parameters tests
+        args = getargspec(plot_residuals)
+        self.assertEqual(len(args[0]), 2, "Expected argument(s) %d, Given %d" % (2, len(args[0])))
+        self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
-        dataframe = load_data('data/house_prices_multivariate.csv')
-        X_house_prices, y_house_prices = data_splitter(dataframe)
-        lm = linear_regression(X_house_prices, y_house_prices)
-        y_pred_house_prices, mse_house_prices, mae_house_prices, r2_house_prices = linear_predictor(lm, X_house_prices,
-                                                                                                    y_house_prices)
-        residuals_house_prices = residuals(y_house_prices, y_pred_house_prices)
+        # Return type tests
+        # Nothing to check here
 
-        plot = plot_residuals(y_house_prices, residuals_house_prices)
-        self.assertTrue(True)
+        # Return value tests
+        # Nothing to check here
+

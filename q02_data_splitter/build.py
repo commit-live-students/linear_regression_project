@@ -1,9 +1,8 @@
-import pandas
-import sys, os
-sys.path.append(os.path.join(os.path.dirname(os.curdir), '..'))
+# Default Imports
+from greyatomlib.linear_regression.q01_load_data.build import load_data
+import pandas as pd
+df = load_data('data/house_prices_multivariate.csv')
 
-from q01_load_data.build import load_data
 
-def data_splitter(df):
-    '''Enter Code Here'''
-    return X, y
+# Your Code Here
+

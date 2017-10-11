@@ -8,7 +8,7 @@
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- | 
 | error_residuals | Series/DataFrame | compulsory | | Residuals |
-| bins | integer | compulsory | | Bincount in histogram |
+| bins | integer | Optional | 60 | Bincount in histogram |
 
 **Please Compare your plot with the his_residuals.png in the images directory**
 https://github.com/commit-live-students/linear_regression_project/blob/master/images/hist_residuals.png

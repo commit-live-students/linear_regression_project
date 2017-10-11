@@ -1,8 +1,10 @@
-## Fitting your first linear regression model
+# Fitting your first linear regression model
 
-Let's write a function `linear_regression()` which takes as input the features and target and fits a LinearRegression with default parameters model on it.
+## Let's write a function `linear_regression()` that 
+* Takes as input the features and target 
+* Fits a LinearRegression with default parameters model on it.
 
-#### Parameters:
+### Parameters:
 
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- |
@@ -10,7 +12,7 @@ Let's write a function `linear_regression()` which takes as input the features a
 | y | Series/DataFrame | compulsory | | Target Variable |
 
 
-#### Returns:
+### Returns:
 
 | Return | dtype | description |
 | --- | --- | --- |

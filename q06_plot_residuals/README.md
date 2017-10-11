@@ -11,4 +11,5 @@
 | error_residuals | Series/DataFrame | compulsory | | Residuals |
 
 **Please Compare your plot with the plot_residuals.png in the images directory**
-![GitHub Logo](https://github.com/commit-live-students/linear_regression_project/blob/master/images/plot_residuals.png)
+
+https://github.com/commit-live-students/linear_regression_project/blob/master/images/plot_residuals.png

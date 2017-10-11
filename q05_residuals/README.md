@@ -1,6 +1,7 @@
-## Calculating residuals - Residuals reveal the real story
+# Calculating residuals - Residuals reveal the real story
 
-Let's write a function `residuals()` that takes in original target variable and our predictions and calculates the residuals.
+## Let's write a function `residuals()` that
+* Takes in original target variable and our predictions and calculates the residuals.
 
 #### Parameters:
 

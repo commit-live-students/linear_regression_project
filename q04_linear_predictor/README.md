@@ -1,8 +1,10 @@
-## Your very first prediction - Using fitted linear regression model
+# Your very first prediction - Using fitted linear regression model
 
-Let's write a function `linear_predictor()` that takes in a fitted linear model and makes a prediction. It also calculates Mean square error, Mean absolute error and r2.
+## Let's write a function `linear_predictor()` that 
+* Takes in a fitted linear model and makes a prediction. 
+* It also calculates Mean square error, Mean absolute error and r2.
 
-#### Parameters:
+### Parameters:
 
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- |
@@ -10,7 +12,7 @@ Let's write a function `linear_predictor()` that takes in a fitted linear model 
 | X | Pandas DataFrame | compulsory | | Dataframe containing feature variables |
 | y | Pandas Series | compulsory | | Target Variable |
 
-#### Returns:
+### Returns:
 
 | Return | dtype | description |
 | --- | --- | --- |

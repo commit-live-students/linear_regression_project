@@ -1,4 +1,4 @@
-## Split Data into Feature and Target Variables - Setting up the analysis
+# Split Data into Feature and Target Variables - Setting up the analysis
 
 Now that you have imported the data, let's split data into target or dependent variable and feature or independent variables. We can use these variables later on to fit a linear regression model.
 
@@ -6,16 +6,16 @@ What would be the dependent variable here?
 
 Tip: In practice, we denote dependent variables with capital X and target variable with small y.
 
-Let's write a function `data_splitter()` which seperates features and target variables:
+## Write a function `data_splitter()` which seperates features and target variables:
 
-#### Parameters:
+### Parameters:
 
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- |
 | df | DataFrame | compulsory |  | Input Dataframe to split |
 
 
-#### Returns:
+### Returns:
 
 | Return | dtype | description |
 | --- | --- | --- |

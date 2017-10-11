@@ -1,8 +1,9 @@
-## Residuals QQ plot -Check if set of data is from some theoretical distribution
+# Residuals QQ plot -Check if set of data is from some theoretical distribution
 
-Let's write a function `qq_residuals()` that plots a quantile-quantile plot of the residuals.
+## Let's write a function `qq_residuals()` that 
+* Plots a quantile-quantile plot of the residuals
 
-#### Parameters:
+### Parameters:
 
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- | 
@@ -11,3 +12,4 @@ Let's write a function `qq_residuals()` that plots a quantile-quantile plot of t
 Hint : https://stackoverflow.com/questions/13865596/quantile-quantile-plot-using-scipy.
 
 **Please Compare your plot with the qq_residuals_plot.png in the images directory**
+https://github.com/commit-live-students/linear_regression_project/blob/master/images/qq_residuals_plot.png

@@ -8,7 +8,7 @@
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- | 
 | y | Series/DataFrame | compulsory | | Target Variable |
-| y_pred | Series/DataFrame | compulsory | | Target Variable |
+| y_pred | Series/DataFrame | compulsory | | Predicted Values |
 
 #### Returns:
 

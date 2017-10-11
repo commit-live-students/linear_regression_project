@@ -1,6 +1,7 @@
-## Plot residuals Histogram - Assess whether the observed error (residuals) is consistent
+# Plot residuals Histogram - Assess whether the observed error (residuals) is consistent
 
-Let's write a function `hist_residuals()` that plots a histogram of the residuals.
+## Let's write a function `hist_residuals()` that 
+* Plots a histogram of the residuals.
 
 #### Parameters:
 
@@ -10,3 +11,4 @@ Let's write a function `hist_residuals()` that plots a histogram of the residual
 | bins | integer | compulsory | | Bincount in histogram |
 
 **Please Compare your plot with the his_residuals.png in the images directory**
+https://github.com/commit-live-students/linear_regression_project/blob/master/images/hist_residuals.png

@@ -2,6 +2,8 @@
 import pandas as pd
 
 path = 'data/house_prices_multivariate.csv'
-
+def load_data(path):
+    data = pd.read_csv(path)
+    return data
 
 # Your code here

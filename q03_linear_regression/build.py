@@ -7,6 +7,7 @@ from sklearn.linear_model import LinearRegression
 
 # Load the package for linear regression and use load_data() and data_splitter() function
 df = load_data('data/house_prices_multivariate.csv')
+df.reset_index(inplace=True)
 X, y = data_splitter(df)
 
 

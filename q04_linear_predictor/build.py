@@ -12,3 +12,14 @@ linear_model = linear_regression(X, y)
 
 
 # Your code here
+def linear_predictor(linear_model,X,y):
+    y_prediction=linear_model.predict(X)
+    meansqrerror=mean_squared_error(y,y_prediction)
+    meanabserror=mean_absolute_error(y,y_prediction)
+    r2scoreis=r2_score(y,y_prediction)
+    #print(type(y_prediction))
+    #print(meanabserror)
+    #print(r2scoreis)
+    return y_prediction,meansqrerror,meanabserror,r2scoreis
+   
+# Your code here

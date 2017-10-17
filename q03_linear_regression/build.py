@@ -8,5 +8,9 @@ from sklearn.linear_model import LinearRegression
 df = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(df)
 
+def linear_regression(X,y):
+    reg=LinearRegression()
+    reg.fit(X,y)
+    return reg
 
 # Your code here

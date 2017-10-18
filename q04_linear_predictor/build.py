@@ -1,3 +1,4 @@
+# %load q04_linear_predictor/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -10,5 +11,12 @@ dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
 
+def linear_predictor(lr, X, y):
+    regressor = LinearRegression()
+    regressor.fit(X,y)
+    y_pred = regressor.predict(X)
+    mse = mean_squared_error(y_pred, y)
+    mae = mean_absolute_error(y_pred, y)
+    r2 = r2_score(y, y_pred)
 
-# Your code here
+    return y_pred, mse, mae, r2

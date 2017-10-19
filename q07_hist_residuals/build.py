@@ -15,3 +15,10 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+
+def hist_residuals(error_residuals,bins=60):
+    plt.hist(error_residuals, bins)
+    plt.title('Histogram - Assess whether the observed error')
+    plt.xlabel('Error Residueals')
+    plt.ylabel('Frequency')
+    plt.show()

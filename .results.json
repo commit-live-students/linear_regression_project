@@ -1,0 +1,1 @@
+{"stats": {"passes": 1, "skipped": 0, "encoding": "UTF-8", "errors": 0, "failures": 0, "total": 1}, "results": [{"classname": "linear_regression_project.q04_linear_predictor.tests.test_q04_linear_predictor:TestLinearPrediction", "type": "success", "name": "test_linear_predictor", "time": 0.010239839553833008}]}

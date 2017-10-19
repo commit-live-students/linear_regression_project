@@ -5,3 +5,10 @@ df = load_data('data/house_prices_multivariate.csv')
 
 
 # Your Code Here
+def data_splitter(df):
+    df=pd.read_csv('data/house_prices_multivariate.csv',index_col=None)
+    #print(df.shape)
+    x=df.iloc[:,:-1]
+    y=df.iloc[:,-1]
+
+    return x,y

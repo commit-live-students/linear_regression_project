@@ -12,3 +12,6 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
 
 # Your code here
+def residuals(y,y_pred):
+    #return np.sqrt(((y_pred-y)**2).mean())
+    return y-y_pred

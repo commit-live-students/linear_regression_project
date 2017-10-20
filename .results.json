@@ -1,0 +1,1 @@
+{"stats": {"passes": 1, "skipped": 0, "encoding": "UTF-8", "errors": 0, "failures": 0, "total": 1}, "results": [{"classname": "linear_regression_project.q08_qq_residuals.tests.test_q08_qq_residuals:TestQqResiduals", "type": "success", "name": "test_plot_residuals", "time": 0.00036597251892089844}]}

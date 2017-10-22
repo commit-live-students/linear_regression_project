@@ -9,4 +9,22 @@ df = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(df)
 
 
+# df['Lot Frontage']=df.index
+# df.index = range(df.shape[0])
+# features = list(df.columns)
+# features = [features[-1]]+features[:-1]
+# features.remove('SalePrice')
+#
+# y = df['SalePrice']
+# X = df[features]
+#y= df['SalePrice']
+#X
+#import numpy as np
+def linear_regression(X,y):
+    model = LinearRegression()
+    model.fit(X,y)
+    return model
+
+#print(model)
+
 # Your code here

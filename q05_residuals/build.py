@@ -10,5 +10,9 @@ X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
+def residuals(y,y_pred) :
+    #SS_Residual = sum((y-y_pred)**2)
+    res = y - y_pred
 
+    return res
 # Your code here

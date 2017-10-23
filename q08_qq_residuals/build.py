@@ -16,6 +16,11 @@ X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
+def qq_residuals(error_residuals):
+
+    #measurements = np.random.normal(loc = 20, scale = 5, size=100)
+    stats.probplot(error_residuals, dist="norm", plot=pylab)
+    pylab.show()
 
 
 # Your code here

@@ -6,6 +6,8 @@ from greyatomlib.linear_regression.q04_linear_predictor.build import linear_pred
 from greyatomlib.linear_regression.q05_residuals.build import residuals
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.pyplot.switch_backend('agg')
 
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
@@ -15,3 +17,9 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def plot_residuals(residuals, bins):
+    plt.hist(residuals,bins=bins)
+    plt.xlim(-490900,304999)
+    #plt.show()
+
+plot_residuals(error_residuals, 60)

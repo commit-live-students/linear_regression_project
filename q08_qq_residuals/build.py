@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 
 import pylab
 import scipy.stats as stats
-
+import matplotlib
+matplotlib.pyplot.switch_backend('agg')
 
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
@@ -17,5 +18,8 @@ linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
+def qq_residuals(err_residuals):
+    stats.probplot(err_residuals,dist='norm',plot=pylab)
+    plt.show()
 
-# Your code here
+qq_residuals(error_residuals)

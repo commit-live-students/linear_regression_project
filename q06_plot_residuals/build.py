@@ -14,4 +14,8 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
 
+def plot_residuals(y,error_residuals):
+    plt.scatter(y,error_residuals)
+    plt.show()
+
 # Your code here

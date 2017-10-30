@@ -10,3 +10,9 @@ X, y = data_splitter(df)
 
 
 # Your code here
+def linear_regression(X,y):
+    reg=LinearRegression()
+    reg.fit(X,y)
+    return reg
+
+# Your code here

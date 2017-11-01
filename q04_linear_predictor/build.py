@@ -8,7 +8,12 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
-linear_model = linear_regression(X, y)
+lm = linear_regression(X, y)
 
+def linear_predictor(lm,X,y):
+    y_pred = lm.predict(X)
+    mse = mean_squared_error(y,y_pred)
+    mae = mean_absolute_error(y,y_pred)
+    r2 = r2_score(y,y_pred)
 
-# Your code here
+    return y_pred,mse,mae,r2

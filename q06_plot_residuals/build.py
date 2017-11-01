@@ -14,4 +14,10 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
 
-# Your code here
+def plot_residuals(y,error_residuals):
+    plt.figure(figsize=(10,6))
+    plt.scatter(y,error_residuals,color='b')
+    plt.xlabel('Sale price')
+    plt.ylabel('Errors')
+    plt.title("Residual Plot")
+    plt.show()

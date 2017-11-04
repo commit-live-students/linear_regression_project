@@ -11,4 +11,10 @@ X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
 
 
-# Your code here
+def linear_predictor(fit, X, y):
+    y_pred = fit.predict(X)
+    _mean_squared_error = mean_squared_error(y,y_pred)
+    _mean_absolute_error = mean_absolute_error(y,y_pred)
+    _r_square = r2_score(y,y_pred)
+
+    return y_pred, _mean_squared_error, _mean_absolute_error, _r_square

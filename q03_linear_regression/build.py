@@ -9,4 +9,6 @@ df = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(df)
 
 
-# Your code here
+def linear_regression(X, y):
+    model = LinearRegression()
+    return model.fit(X, y)

@@ -12,3 +12,9 @@ linear_model = linear_regression(X, y)
 
 
 # Your code here
+def linear_predictor(lm, X, y):
+    y_pred = lm.predict(X)
+    mse = mean_squared_error(y, y_pred)
+    mae = mean_absolute_error(y, y_pred)
+    r2 = r2_score(y, y_pred)
+    return y_pred, mse, mae, r2

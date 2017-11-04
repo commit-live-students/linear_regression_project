@@ -19,3 +19,8 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def qq_residuals(error_residuals):
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    stats.probplot(error_residuals, plot=ax)
+    plt.show()

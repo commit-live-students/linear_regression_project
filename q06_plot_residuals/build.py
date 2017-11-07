@@ -15,3 +15,5 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def plot_residuals(y,error_residuals):
+    return plt.plot(y,error_residuals)

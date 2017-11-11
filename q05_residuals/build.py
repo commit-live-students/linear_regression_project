@@ -11,4 +11,8 @@ linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
 
-# Your code here
+def residuals(y_actual, y_predicted):
+    return y_actual - y_predicted
+
+residuals_house_prices = residuals(y,y_pred)
+    

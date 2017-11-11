@@ -15,3 +15,8 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+
+def plot_residuals(y,error_residuals):
+    residuals_plot = plt.scatter(y,error_residuals)
+    plt.show()
+    return residuals_plot

@@ -12,3 +12,10 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
 
 # Your code here
+def residuals(y, y_pred):
+    # Residuals are the difference between actual and predicted value
+    return y - y_pred
+
+# r = residuals(y, y_pred)
+# print ("Residual Type: {0}".format(type(r)))
+# print ("Residual Value: {0}".format(r.head()))

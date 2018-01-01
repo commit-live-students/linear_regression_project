@@ -5,9 +5,9 @@ from greyatomlib.linear_regression.q03_linear_regression.build import linear_reg
 from greyatomlib.linear_regression.q04_linear_predictor.build import linear_predictor
 from greyatomlib.linear_regression.q05_residuals.build import residuals
 from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-import pylab
+
 import scipy.stats as stats
 
 
@@ -19,3 +19,18 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+import matplotlib
+matplotlib.use("tkAgg")
+import matplotlib.pyplot as plt
+import pylab
+
+def qq_residuals(error_residuals):
+    # Create a probability plot first
+    # This is the probability of sample data against the quartiles of a specific
+    # distribution (normal by default)
+    # This plot is typically used to check the error distribution (should be normal)
+    stats.probplot(error_residuals, dist="norm", plot=pylab)
+    pylab.show()
+    return None
+
+# qq_residuals(error_residuals) # C'est bon. comme memme

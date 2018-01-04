@@ -1,3 +1,4 @@
+# %load q06_plot_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -15,3 +16,11 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def plot_residuals(y, error_residuals):
+    # Create a scatter plot to compare residual values against dep variable
+    plt.scatter(y, error_residuals)
+    plt.title("Residuals plot")
+    plt.xlabel("Sale Price")
+    plt.ylabel("Errors")
+    plt.show()
+    return None

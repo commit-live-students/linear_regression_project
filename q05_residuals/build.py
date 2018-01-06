@@ -6,9 +6,15 @@ from greyatomlib.linear_regression.q04_linear_predictor.build import linear_pred
 from sklearn.linear_model import LinearRegression
 
 dataframe = load_data('data/house_prices_multivariate.csv')
-X, y = data_splitter(dataframe)
+res = data_splitter(dataframe)
+X=res[0]
+y=res[1]
 linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
 
 # Your code here
+
+def residuals(y,y_pred):
+    residual=y-y_pred
+    return residual

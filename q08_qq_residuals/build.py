@@ -14,8 +14,10 @@ import scipy.stats as stats
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
-y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
+y_pred, mse, mae, r2 = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
 
-# Your code here
+def qq_residuals(error_residuals):
+    stats.probplot(error_residuals, dist="norm", plot=pylab)
+    pylab.show()

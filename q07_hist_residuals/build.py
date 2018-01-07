@@ -1,3 +1,4 @@
+# %load q07_hist_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -15,3 +16,11 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def hist_residuals(error_residuals, bins=60):
+    # Create a histogram
+    plt.hist(x=error_residuals, bins=bins)
+    plt.title("Residuals Histogram")
+    plt.xlabel("Residual Errors")
+    plt.ylabel("Frequency")
+    plt.show()
+    return None

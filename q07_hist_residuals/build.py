@@ -6,12 +6,15 @@ from greyatomlib.linear_regression.q04_linear_predictor.build import linear_pred
 from greyatomlib.linear_regression.q05_residuals.build import residuals
 import matplotlib.pyplot as plt
 
-
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
-y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
+y_pred, mse, mae, r2 = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
-
-# Your code here
+def hist_residuals(error_residuals, bins=60):
+    plt.hist(error_residuals, bins)
+    plt.title('Error Residuals')
+    plt.xlabel('Residuals')
+    plt.ylabel('Frequency')
+    plt.show()

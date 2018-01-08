@@ -19,3 +19,6 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def qq_residuals(data):
+    stats.probplot(data, dist="norm", plot=pylab)
+    pylab.show()

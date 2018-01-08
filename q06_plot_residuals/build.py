@@ -15,3 +15,9 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def plot_residuals(x,y):
+    plt.scatter(x,y)
+    plt.title('Residual Plot')
+    plt.xlabel('Sale price')
+    plt.ylabel('Errors')
+    plt.show()

@@ -15,3 +15,6 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def hist_residuals(er_residuals,bins=60):
+    plt.hist(er_residuals,bins=bins)
+    plt.show()

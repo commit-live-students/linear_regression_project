@@ -17,5 +17,7 @@ linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
-
 # Your code here
+def qq_residuals(er_residuals):
+    stats.probplot(er_residuals,dist="norm", plot=pylab)
+    pylab.show()

@@ -7,5 +7,5 @@ X, y = data_splitter(dataframe)
 
 def linear_regression(X, y):
     regressor = LinearRegression()
-    lr = regressor.fit(X, y)
-    return lr
+    lm = regressor.fit(X, y)
+    return lm

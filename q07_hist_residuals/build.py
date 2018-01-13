@@ -4,6 +4,9 @@ from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
 from greyatomlib.linear_regression.q03_linear_regression.build import linear_regression
 from greyatomlib.linear_regression.q04_linear_predictor.build import linear_predictor
 from greyatomlib.linear_regression.q05_residuals.build import residuals
+
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 
 
@@ -15,3 +18,11 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def hist_residuals(error_residuals, bins=60):
+    plt.hist(error_residuals,bins)
+    plt.xlabel("Range")
+    plt.ylabel("Residual Errors")
+    plt.title("Residuals Histogram")
+    plt.show()
+
+#hist_residuals(error_residuals)

@@ -15,3 +15,11 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def hist_residuals(error_residuals, bins=60):
+    plt.hist(error_residuals, bins)
+    plt.xlabel('error_residuals')
+    plt.ylabel('Numbers')
+    plt.show()
+
+
+#print hist_residuals(error_residuals, bins=60)

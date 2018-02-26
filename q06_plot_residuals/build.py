@@ -10,8 +10,13 @@ import matplotlib.pyplot as plt
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
-y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
+y_pred,MSE_sklearn,MAE_sklearn, r2_sklearn = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
-
-# Your code here
+def plot_residuals(y,error_residuals):
+    plt.scatter(y,error_residuals, label='Error Residuals', color='b', s=10, marker="o")
+    plt.xlabel('y actual')
+    plt.ylabel('error_residuals')
+    plt.title('Error Residuals Graph')
+    plt.legend()
+    plt.show()

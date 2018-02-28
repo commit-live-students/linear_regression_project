@@ -15,3 +15,11 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def plot_residuals(y, error_residuals):
+    plt.plot(y, error_residuals,"bo")
+    plt.xlabel('Sale price')
+    plt.ylabel('Errors')
+    plt.title('Residual plot')
+    plt.show()
+
+#print(plot_residuals(y,error_residuals))

@@ -10,5 +10,9 @@ dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
 
-
-# Your code here
+def linear_predictor(lm,X,y):
+    predictions = linear_model.predict(X)
+    mse = mean_squared_error(y,predictions)
+    mae = mean_absolute_error(y,predictions)
+    r2 = r2_score(y,predictions)
+    return predictions,mse,mae,r2

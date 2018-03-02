@@ -10,5 +10,6 @@ X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
-
-# Your code here
+def residuals(y,pred):
+    err_res = y-pred
+    return err_res

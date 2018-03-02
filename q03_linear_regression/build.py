@@ -4,3 +4,7 @@ from sklearn.linear_model import LinearRegression
 
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
+
+def linear_regression(X,y):
+    regressor = LinearRegression()
+    return regressor.fit(X, y)

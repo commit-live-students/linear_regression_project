@@ -9,6 +9,3 @@ X, y = data_splitter(dataframe)
 def linear_regression(X,y):
     regressor = LinearRegression()
     return regressor.fit(X, y)
-
-linear_regression(X,y)
-

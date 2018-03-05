@@ -19,5 +19,3 @@ def linear_predictor(linear_model, X, y):
     r2 = r2_score(y, y_pred)
 
     return y_pred, mse, mae, r2
-
-print linear_predictor(linear_model, X, y)

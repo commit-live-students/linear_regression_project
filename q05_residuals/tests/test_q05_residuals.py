@@ -1,5 +1,5 @@
 from unittest import TestCase
-from inspect import getargspec
+from inspect import getfullargspec
 import pandas
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -17,10 +17,10 @@ class TestResiduals(TestCase):
     def test_residuals_arguments(self):
 
         # Input parameters tests
-        args = getargspec(residuals)
+        args = getfullargspec(residuals)
         self.assertEqual(len(args[0]), 2, "Expected argument(s) %d, Given %d" % (2, len(args[0])))
     def test_residuals_defaults(self):
-        args = getargspec(residuals)
+        args = getfullargspec(residuals)
         self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
         # Return type tests

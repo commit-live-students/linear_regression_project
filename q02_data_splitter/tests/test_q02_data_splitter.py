@@ -1,7 +1,7 @@
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from ..build import data_splitter
 from unittest import TestCase
-from inspect import getargspec
+from inspect import getfullargspec
 import pandas
 
 df = load_data('data/house_prices_multivariate.csv')
@@ -11,11 +11,11 @@ class TestDataSplitter(TestCase):
     def test_data_splitter_arguments(self):
 
         # Input parameters tests
-        args = getargspec(data_splitter)
+        args = getfullargspec(data_splitter)
         self.assertEqual(len(args[0]), 1, "Expected argument(s) %d, Given %d" % (1, len(args[0])))
 
     def test_data_splitter_defaults(self):
-        args = getargspec(data_splitter)
+        args = getfullargspec(data_splitter)
         self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
 

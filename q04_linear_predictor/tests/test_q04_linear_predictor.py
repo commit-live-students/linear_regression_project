@@ -3,7 +3,7 @@ from ..build import linear_predictor
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
 from greyatomlib.linear_regression.q03_linear_regression.build import linear_regression
-from inspect import getargspec
+from inspect import getfullargspec
 import numpy
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
@@ -15,10 +15,10 @@ class TestLinearPrediction(TestCase):
     def test_linear_predictor_arguements(self):
 
         # Input parameters tests
-        args = getargspec(linear_predictor)
+        args = getfullargspec(linear_predictor)
         self.assertEqual(len(args[0]), 3, "Expected argument(s) %d, Given %d" % (3, len(args[0])))
     def test_linear_predictor_defaults(self):
-        args = getargspec(linear_predictor)
+        args = getfullargspec(linear_predictor)
         self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
         # Return type tests

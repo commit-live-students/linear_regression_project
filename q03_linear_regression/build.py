@@ -5,6 +5,6 @@ lr = LinearRegression()
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 def linear_regression(X,y):
-    fit_line = lr.fit(X,y)
-    return fit_line
+    lm = lr.fit(X,y)
+    return lm
 #print fit_line

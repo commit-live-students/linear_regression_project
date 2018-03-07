@@ -10,6 +10,11 @@ import matplotlib.pyplot as plt
 import pylab
 import scipy.stats as stats
 
+def qq_residuals(error_residuals):
+    stats.probplot(error_residuals, plot=pylab)
+    show.plot()
+
+
 
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)

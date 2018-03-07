@@ -8,7 +8,9 @@ from sklearn.linear_model import LinearRegression
 dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
-y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
+y_pred, mse, mae, r2 = linear_predictor(linear_model, X, y)
 
 
 # Your code here
+def residuals(y, y_pred):
+    return y-y_pred

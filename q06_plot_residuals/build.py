@@ -1,4 +1,4 @@
-# Default Imports
+
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
 from greyatomlib.linear_regression.q03_linear_regression.build import linear_regression
@@ -13,5 +13,10 @@ linear_model = linear_regression(X, y)
 y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
+def plot_residuals(y=y, error_residuals=error_residuals):
+    plt.figure(figsize=(15,8))
+    plt.scatter(y, error_residuals)
+    plt.title('Residual plot')
+    plt.xlabel('Sale price')
+    plt.ylabel('Errors')
 
-# Your code here

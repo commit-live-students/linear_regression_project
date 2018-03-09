@@ -9,9 +9,7 @@ class TestPlotResiduals(TestCase):
         # Input parameters tests
         args = getfullargspec(plot_residuals)
         self.assertEqual(len(args[0]), 2, "Expected argument(s) %d, Given %d" % (2, len(args[0])))
-    def test_plot_residuals_defaults(self):
-        args = getfullargspec(plot_residuals)
-        self.assertEqual(args[3], (None), "Expected default values do not match given default values")
+   
 
         # Return type tests
         # Nothing to check here

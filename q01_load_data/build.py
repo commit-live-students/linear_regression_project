@@ -5,6 +5,6 @@ path = 'data/house_prices_multivariate.csv'
 
 def load_data(path):
     df = pd.read_csv(path,delimiter=",")
-    return df
+    return df.head()
 
 print load_data(path)

@@ -4,5 +4,12 @@ import pandas as pd
 path = 'data/house_prices_multivariate.csv'
 
 
-# Write your code here :
 
+def load_data(path):
+    
+
+    data = pd.read_csv(path , index_col= False)
+
+    return data
+
+load_data(path)

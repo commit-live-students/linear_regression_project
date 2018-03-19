@@ -8,3 +8,9 @@ X, y = data_splitter(dataframe)
 # Write your code here :
 
 
+def linear_regression(X,y):
+    from sklearn.linear_model import LinearRegression
+    lr = LinearRegression()
+    return lr.fit(X,y)
+
+linear_regression(X,y)

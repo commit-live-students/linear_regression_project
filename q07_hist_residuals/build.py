@@ -15,6 +15,16 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
 
+
+
+
+bins = 60
+def hist_residuals(error_residuals , bins):
+    plt.hist(error_residuals , bins = bins)
+    plt.show()
+
+hist_residuals(error_residuals , bins)
+
 # Your code here
 def hist_residuals(error_residuals, bins=60):
     plt.figure(figsize=(15,8))

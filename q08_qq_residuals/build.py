@@ -1,3 +1,4 @@
+# %load q08_qq_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -9,6 +10,9 @@ import matplotlib.pyplot as plt
 
 import pylab
 import scipy.stats as stats
+import numpy as np
+import statsmodels.api as sm
+import pylab
 
 
 dataframe = load_data('data/house_prices_multivariate.csv')
@@ -19,3 +23,10 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def qq_residuals(error_residuals):
+    stats.probplot(error_residuals,dist='norm',plot=pylab)
+    pylab.show()
+
+
+
+

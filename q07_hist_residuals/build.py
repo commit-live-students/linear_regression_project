@@ -26,9 +26,3 @@ def hist_residuals(error_residuals , bins):
 hist_residuals(error_residuals , bins)
 
 # Your code here
-def hist_residuals(error_residuals, bins=60):
-    plt.figure(figsize=(15,8))
-    plt.hist(error_residuals, bins=bins)
-    plt.show()
-
-hist_residuals(error_residuals)

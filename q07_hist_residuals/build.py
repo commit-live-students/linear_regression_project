@@ -1,3 +1,4 @@
+# %load q07_hist_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -18,3 +19,6 @@ error_residuals = residuals(y, y_pred)
 def hist_residuals(error_residuals, bins=60):
     plt.figure(figsize=(15,8))
     plt.hist(error_residuals, bins=bins)
+    plt.show()
+
+

@@ -30,8 +30,10 @@ Assumptions of linear regression model play an extremely important role in the m
 So, let's get started.
 
 ## About House Prices dataset
+For this exercise, we will use the House Prices dataset, which we have already discussed in the session. The dataset contains SalePrice of around 1400 houses. The dataset is a part of a larger dataset. You can read about the dataset description [here](https://raw.githubusercontent.com/commit-live-students/descriptive_statistics_project/master/data/datadocumentation.txt)
 
 
+## Imports to be used for this project
 Here are some of the imports that we will be using throughout the assignment.
 
 

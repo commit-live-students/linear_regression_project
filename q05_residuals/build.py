@@ -12,3 +12,5 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
 
 # Your code here
+def residuals(y_test,y_pred):
+    return y_test-y_pred

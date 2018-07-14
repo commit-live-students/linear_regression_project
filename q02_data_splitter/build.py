@@ -5,4 +5,7 @@ df = load_data('data/house_prices_multivariate.csv')
 
 
 # Your Code Here
-
+def data_splitter(df):
+    x=pd.DataFrame(df.drop("SalePrice" , axis=1))
+    y=pd.Series(df["SalePrice"])
+    return x,y

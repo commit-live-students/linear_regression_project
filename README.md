@@ -36,7 +36,7 @@ Here are some of the imports that we will be using throughout the assignment.
 
 
 **import pandas as pd**
-**import numpy as np**
+**import numpy as np<br>**
 **import matplotlib.pyplot as plt<br>**
 **from pprint import pprint<br>**
 **%matplotlib inline<br>**

@@ -36,9 +36,15 @@ Here are some of the imports that we will be using throughout the assignment.
 
 
 **import pandas as pd**
+
 **import numpy as np<br>**
+
 **import matplotlib.pyplot as plt<br>**
+
 **from pprint import pprint<br>**
+
 **%matplotlib inline<br>**
+
 **from sklearn.linear_model import LinearRegression<br>**
+
 **from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score<br>**

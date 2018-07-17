@@ -5,6 +5,7 @@ from greyatomlib.linear_regression.q03_linear_regression.build import linear_reg
 from greyatomlib.linear_regression.q04_linear_predictor.build import linear_predictor
 from greyatomlib.linear_regression.q05_residuals.build import residuals
 import matplotlib.pyplot as plt
+plt.switch_backend('agg')
 
 
 dataframe = load_data('data/house_prices_multivariate.csv')

@@ -1,3 +1,4 @@
+# %load q08_qq_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -19,4 +20,11 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 error_residuals = residuals(y, y_pred)
 
 
-# Your code here
+# Function to plot qq chart for error residuals
+def qq_residuals(error_residuals):
+    stats.probplot(error_residuals, dist='norm',plot=pylab)
+    pylab.show()
+
+qq_residuals(error_residuals)
+
+

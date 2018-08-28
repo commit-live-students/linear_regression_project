@@ -1,3 +1,4 @@
+# %load q08_qq_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -20,3 +21,11 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def qq_residuals(resid):
+    x = pd.DataFrame(np.random.normal(0,1,1000))
+    y = pd.DataFrame(resid)
+    xq = pd.qcut(x[0],100,labels=np.arange(100))
+    yq = pd.qcut(y[0],100,labels=np.arange(100))
+    plt.scatter(xq.sort_values(),yq.sort_values())
+    
+

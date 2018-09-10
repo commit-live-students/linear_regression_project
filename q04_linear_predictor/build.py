@@ -18,8 +18,14 @@ def linear_predictor(linear_model,X,y):
     mae = mean_absolute_error(y, y_pred)
     r2 = r2_score(y, y_pred)
     return mse,mae,r2
-c=linear_predictor(X,y,linear_model)
+c=linear_predictor(linear_model,X,y)
 c
+def linear_predictor(linear_model,X,y):
+    y_pred =linear_model.predict(X)
+    mse = mean_squared_error(y_pred,y)
+    mae = mean_absolute_error(y_pred,y)
+    r2 = r2_score(y,y_pred)
+    return y_pred,mse,mae,r2
 
 
 

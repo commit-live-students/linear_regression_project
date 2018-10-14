@@ -20,6 +20,6 @@ def hist_residuals(error_residuals, bins=60):
     plt.figure(figsize=(15,8))
     plt.hist(error_residuals, bins=bins)
 
-
+hist_residuals(error_residuals, bins=60)
 
 

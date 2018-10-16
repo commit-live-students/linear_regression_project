@@ -1,3 +1,4 @@
+# %load q05_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -12,3 +13,9 @@ y_pred, _, __, ___ = linear_predictor(linear_model, X, y)
 
 
 # Your code here
+def residuals(target,target_pred):
+    error_residuals = target - target_pred
+    return error_residuals
+
+residuals(y, y_pred)
+

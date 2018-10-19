@@ -17,7 +17,14 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+import numpy as np
+import seaborn as sns
+sns.set(style='whitegrid')
 
 
+def plot_residuals(y,y_pred):
+    #return y-y_pred
+    sns.residplot(y,y_pred, lowess=True, color='g')
+plot_residuals(y,y_pred)
 
 

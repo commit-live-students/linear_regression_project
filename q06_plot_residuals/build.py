@@ -1,3 +1,4 @@
+# %load q06_plot_residuals/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -6,6 +7,7 @@ from greyatomlib.linear_regression.q04_linear_predictor.build import linear_pred
 from greyatomlib.linear_regression.q05_residuals.build import residuals
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
+
 plt.switch_backend('agg')
 
 dataframe = load_data('data/house_prices_multivariate.csv')
@@ -16,4 +18,13 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def plot_residuals(error_residuals,y):
+    plt.scatter(y, error_residuals)
+    plt.ylabel('Errors')
+    plt.xlabel('SalePrice')
+    plt.title('Residual plot')
+    plt.show()
+plot_residuals(error_residuals,y)
+
+
 

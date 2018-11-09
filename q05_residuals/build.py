@@ -15,7 +15,7 @@ y_pred, rms, rma,r2  = linear_predictor(linear_model, X, y)
 # Your code here
 def residuals(y, y_pred):
     
-    error_residuals = y - y_pred
+    error_residuals = y_pred -y
     
     return error_residuals
 residuals(y, y_pred)

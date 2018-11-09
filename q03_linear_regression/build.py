@@ -9,8 +9,8 @@ X, y = data_splitter(dataframe)
 # Write your code here :
 def linear_regression(X,y):
     
-    lm = LinearRegression()
-    lm.fit(X,y)
+    lm = LinearRegression() #create a linear regression model
+    lm.fit(X,y)  # training of model
     
     return lm
     

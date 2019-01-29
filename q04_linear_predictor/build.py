@@ -1,3 +1,4 @@
+# %load q04_linear_predictor/build.py
 # Default Imports
 from greyatomlib.linear_regression.q01_load_data.build import load_data
 from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
@@ -11,4 +12,16 @@ X, y = data_splitter(dataframe)
 linear_model = linear_regression(X, y)
 
 
+
+
 # Your code here
+def linear_predictor(lm,X,y):
+    linearRegressor = LinearRegression(normalize = False)
+    ypred = linear_model.predict(X)
+    mse = mean_squared_error(y,ypred)
+    r2 = r2_score(y, ypred)
+    mae = mean_absolute_error(y, ypred)
+    return ypred,mse,mae,r2
+linear_predictor(linear_model,X,y)
+
+

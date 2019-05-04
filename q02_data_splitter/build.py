@@ -5,4 +5,8 @@ df = load_data('data/house_prices_multivariate.csv')
 
 
 # Your Code Here
+def data_splitter(df):
+    X = df.iloc[:, :-1]
+    y = df.iloc[:, -1]
 
+    return X, y

@@ -6,5 +6,6 @@ dataframe = load_data('data/house_prices_multivariate.csv')
 X, y = data_splitter(dataframe)
 
 # Write your code here :
-
-
+def linear_regression(xinput,yinput):
+    regr = LinearRegression()
+    return regr.fit(xinput, yinput)

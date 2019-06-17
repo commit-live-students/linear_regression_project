@@ -20,3 +20,6 @@ error_residuals = residuals(y, y_pred)
 
 
 # Your code here
+def qq_residuals(error_residuals):
+    plt.figure(figsize=(15,8))
+    plt.hist(error_residuals, bins=bins)

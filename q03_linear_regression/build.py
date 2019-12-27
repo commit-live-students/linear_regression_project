@@ -1,10 +1,24 @@
-from greyatomlib.linear_regression.q01_load_data.build import load_data
-from greyatomlib.linear_regression.q02_data_splitter.build import data_splitter
+
+import pandas as pd
 from sklearn.linear_model import LinearRegression
+#path = 'data/house_prices_multivariate.csv'
+def load_data(path):
+        return pd.read_csv(path)
+df = load_data('data/house_prices_multivariate.csv')
 
-dataframe = load_data('data/house_prices_multivariate.csv')
-X, y = data_splitter(dataframe)
 
-# Write your code here :
+# Your Code Here
+def data_splitter(df):
+    return df.iloc[:,:-1],df.iloc[:,-1]
+
+
+
+X,Y = data_splitter(df)
+def linear_regression(X,Y):
+    from sklearn.linear_model import LinearRegression
+    regressor = LinearRegression()
+    regressor.fit(X,Y)
+    return regressor
+
 
 
